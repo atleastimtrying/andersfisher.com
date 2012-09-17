@@ -59,6 +59,11 @@ section.links a{
   line-height: 45px;
   margin: 10px;
 }
+
+section ul{
+  margin:10px;
+}
+
 section ul li{
   list-style:none;
 }
