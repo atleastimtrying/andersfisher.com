@@ -4,6 +4,7 @@
 }
 body{
   font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-size:16px;
 }
 
 article{
@@ -15,17 +16,9 @@ header{
   border-bottom:1px solid gray;
 }
 
-header h1{
-}
-
+header h1,
 header h2{
-  font-family: 'Amatic SC', cursive;
-  color:#4285f4;
-  font-weight:lighter;
-}
-
-article{
-  vertical-align:top;
+  font-weight:bold;
 }
 
 section{
@@ -36,6 +29,7 @@ section{
   display:inline-block;
   color:#333;
   box-shadow:2px 2px 2px rgba(0,0,0,0.1);
+  min-height:320px;
 }
 
 section h2{
@@ -47,27 +41,101 @@ section h2{
 }
 
 section p{
-  margin:10px  
+  margin:10px;
 }
-section.links a{
-  padding:5px;
+
+section ul{
+  padding:10px;
+}
+section li{
+  list-style:none;
+}
+
+footer{
+  width:auto;
+  clear:both;
+  text-align:left;
+  padding:20px 10px 10px 20px;
+  background:#333;
+  margin-bottom:0;
+}
+
+footer a{
+  padding: 3px 5px;
   border-radius:2px;
   background:white;
   color:#333;
   text-decoration:none;
   border:1px solid white;
-  line-height: 45px;
-  margin: 10px;
+  line-height: 17px;
+  font-size:16px;
+  margin:0 10px 10px 0;
+  display:inline-block;
 }
 
-section ul{
-  margin:10px;
-}
-
-section ul li{
-  list-style:none;
-}
-section.links a:hover{
+footer a:hover{
   background:#333;
   color:white;
+}
+
+@media all and (max-width: 440px){
+  header{
+    padding:10px;
+  }
+  article{
+    padding:10px 0 0 10px;
+  }
+  section{
+    width:auto;
+    display:block;
+    min-height:0;
+    margin:0 10px 10px 0;
+  }
+  footer{
+    text-align:center;
+    padding:10px 0;
+  }
+  footer a{
+    padding:10px;
+  }
+}
+
+@media all and (max-width: 699px) and (min-width: 441px) {
+
+  section{
+    width:auto;
+    display:block;
+    min-height:0;
+  }
+  section p{
+    max-width:320px;
+  }
+  section h2{
+    text-align:left;
+    padding:0 10px;
+  }
+  section:nth-child(2n),
+  section:nth-child(2n) h2{
+    text-align:right;
+  }
+
+}
+@media all and (max-width: 1000px) and (min-width: 700px) {
+  section{
+    width: 47.5%;
+    margin-right: 2%;
+    display: block;
+    float: left;
+  }
+}
+@media all and (min-width: 1001px) {
+  article{
+    width:1000px;
+    margin:0 auto;
+  }
+  section{
+    width:311px;
+    display:block;
+    float:left;
+  }
 }
