@@ -2,9 +2,14 @@
   margin:0;
   padding:0;
 }
+html{
+  height:100%;
+  background:#333;
+}
 body{
   font-family: 'Yanone Kaffeesatz', sans-serif;
   font-size:16px;
+  background:#fff;
 }
 
 article{
@@ -18,7 +23,7 @@ header{
 
 header h1,
 header h2{
-  font-weight:bold;
+  font-weight:normal;
 }
 
 section{
@@ -44,7 +49,7 @@ section h2:after{
   content:"";
   display:block;
   width:100%;
-  height:6px;
+  height:8px;
   background-color:#333;
   position:absolute;
   bottom:0;
@@ -128,6 +133,9 @@ footer a:hover{
   section:nth-child(2n),
   section:nth-child(2n) h2{
     text-align:right;
+  }
+  section:nth-child(2n) p{
+    width:auto;
   }
 
 }
