@@ -4,7 +4,7 @@
 }
 html{
   height:100%;
-  background:#333;
+  background:rgb(59,141,195);
 }
 body{
   font-family: 'Yanone Kaffeesatz', sans-serif;
@@ -13,12 +13,18 @@ body{
 }
 
 article{
-  padding:20px 0 0 20px;
+  padding:20px;
+  -moz-column-count: 3;
+  -webkit-column-count: 3;
+  column-count: 3;
+  -moz-column-gap: 20px;
+  -webkit-column-gap: 20px;
+  column-gap: 20px;
 }
 
 header{
   padding:30px;
-  border-bottom:1px solid gray;
+  border-bottom:1px solid #333;
 }
 
 header h1,
@@ -27,20 +33,25 @@ header h2{
 }
 
 section{
-  border : 1px solid gray;
+  border : 1px solid #333;
   border-radius:2px;
-  margin:0 20px 20px 0;
-  width:220px;
+  width:100%;
   display:inline-block;
   color:#333;
-  box-shadow:2px 2px 2px rgba(0,0,0,0.1);
+  box-shadow:8px 5px 5px rgba(0,0,0,0.1);
+  margin-bottom:20px;
+  transition:box-shadow 0.5s ease-out;
+}
+section:hover{
+  border : 1px solid rgb(59,141,195);
+  box-shadow:12px 8px 8px rgba(0,0,0,0.1);
 }
 
 section h2{
   font-family: 'Source Sans Pro', sans-serif;
   text-align:center;
   color:#333;
-  background:#fff;
+  background-color: #fff;
   margin:-1px -1px 10px -1px;
   position:relative;
 }
@@ -53,6 +64,12 @@ section h2:after{
   position:absolute;
   bottom:0;
   left:0;
+}
+section:hover h2{
+  color:rgb(59,141,195);
+}
+section:hover  h2:after{
+  background-color:rgb(59,141,195);
 }
 
 section p{
@@ -71,25 +88,34 @@ section p a:hover{
 section ul{
   padding:10px;
 }
+
 section li{
   list-style:none;
 }
 
-section dl{
+dl{
 
 }
-section dt{
 
+dt{
+  border-bottom: 1px solid #333;
+  font-weight: bold;
+  margin: 10px;
+  text-align:left;
 }
-section dd{
 
+dt:nth-child(odd){
+  text-align:right;
 }
-section dd ul{
 
+dd{
+  text-align:left;
 }
-section dd ul li{
 
+dd:nth-child(odd){
+  text-align:right;
 }
+
 
 
 footer{
@@ -97,7 +123,7 @@ footer{
   clear:both;
   text-align:left;
   padding:20px 10px 10px 20px;
-  background:#333;
+  background:rgb(59,141,195);
   margin-bottom:0;
 }
 
@@ -120,17 +146,14 @@ footer a:hover{
 }
 
 @media all and (max-width: 440px){
-  header{
-    padding:10px;
-  }
   article{
-    padding:10px 0 0 10px;
+    -moz-column-count: 1;
+    -webkit-column-count: 1;
+    column-count: 1;
   }
-  section{
-    width:auto;
-    display:block;
-    min-height:0;
-    margin:0 10px 10px 0;
+  header,
+  article{
+    padding:10px;
   }
   footer{
     text-align:center;
@@ -142,25 +165,30 @@ footer a:hover{
 }
 
 @media all and (max-width: 699px) and (min-width: 441px) {
-
-  section{
-    width:auto;
-    display:block;
-    min-height:0;
+  article{
+    -moz-column-count: 1;
+    -webkit-column-count: 1;
+    column-count: 1;
   }
-  section p{
+
+  section p,
+  section dl{
     max-width:320px;
     margin-right:45%;
   }
   section h2{
-    text-align:left;
+    text-align:right;
     padding:0 10px;
   }
-  section:nth-child(2n),
-  section:nth-child(2n) h2{
+  section:nth-child(odd){
     text-align:right;
   }
-  section:nth-child(2n) p{
+
+  section:nth-child(odd) h2{
+  text-align:left;
+  }
+  section:nth-child(odd) p,
+  section:nth-child(odd) dl{
     width:auto;
     margin-left:45%;
     margin-right:10px;
@@ -168,11 +196,13 @@ footer a:hover{
 
 }
 @media all and (max-width: 1000px) and (min-width: 700px) {
+  article{
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+  }
   section{
-    width: 47.5%;
-    margin-right: 2%;
-    display: block;
-    float: left;
+    width:99%;
   }
 }
 @media all and (min-width: 1001px) {
@@ -182,7 +212,5 @@ footer a:hover{
   }
   section{
     width:311px;
-    display:block;
-    float:left;
   }
 }
