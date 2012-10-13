@@ -68,8 +68,18 @@ section h2:after{
 section:hover h2{
   color:rgb(59,141,195);
 }
+
 section:hover  h2:after{
   background-color:rgb(59,141,195);
+}
+
+section h3 a{
+  text-decoration:none;
+  color:inherit;
+  margin:10px;
+}
+section h3 a:hover{
+  color:rgb(59,141,195);
 }
 
 section p{
@@ -79,10 +89,11 @@ section p{
 section p a{
   text-decoration:none;
   color:inherit;
-  font-style:italic;
+  font-weight:bold;
 }
 section p a:hover{
   font-style:normal;
+  color:rgb(59,141,195);
 }
 
 section ul{
