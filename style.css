@@ -25,11 +25,19 @@ article{
 header{
   padding:30px;
   border-bottom:1px solid #333;
+  position:relative;
 }
 
 header h1,
 header h2{
   font-weight:normal;
+}
+header canvas{
+  position:absolute;
+  right: 0;
+  top:0;
+  height:127px;
+  width:50%;
 }
 
 section{
@@ -172,6 +180,9 @@ footer a:hover{
   }
   footer a{
     padding:10px;
+  }
+  canvas{
+    display:none;
   }
 }
 
