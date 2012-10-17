@@ -46,26 +46,17 @@ header h2{
 }
 
 section{
-  border : 1px solid #333;
-  border-radius:2px;
   width:100%;
   display:inline-block;
-  color:#333;
-  box-shadow:8px 5px 5px rgba(0,0,0,0.1);
+  color:#666;
   margin-bottom:20px;
-  transition:box-shadow 0.5s ease-out;
-}
-section:hover{
-  border : 1px solid rgb(59,141,195);
-  box-shadow:12px 8px 8px rgba(0,0,0,0.1);
 }
 
 section h2{
   font-family: 'Source Sans Pro', sans-serif;
-  text-align:center;
+  text-align:left;
   color:#333;
-  background-color: #fff;
-  margin:-1px -1px 10px -1px;
+  margin:0 0 10px 0;
   position:relative;
 }
 section h2:after{
@@ -78,25 +69,19 @@ section h2:after{
   bottom:0;
   left:0;
 }
-section:hover h2{
-  color:rgb(59,141,195);
-}
-
-section:hover  h2:after{
-  background-color:rgb(59,141,195);
-}
 
 section h3 a{
   text-decoration:none;
   color:inherit;
-  margin:10px;
+  margin-bottom:10px;
 }
+
 section h3 a:hover{
   color:rgb(59,141,195);
 }
 
 section p{
-  margin:10px;
+  margin-bottom:10px;
 }
 
 section p a{
@@ -124,7 +109,7 @@ dl{
 dt{
   border-bottom: 1px solid #333;
   font-weight: bold;
-  margin: 10px;
+  margin-bottom: 10px;
   text-align:left;
 }
 
