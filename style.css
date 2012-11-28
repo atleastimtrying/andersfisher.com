@@ -207,7 +207,7 @@ footer a:hover{
   }
 
 }
-@media all and (max-width: 1000px) and (min-width: 700px) {
+@media all and (max-width: 1040px) and (min-width: 700px) {
   article{
     -moz-column-count: 2;
     -webkit-column-count: 2;
@@ -217,7 +217,7 @@ footer a:hover{
     width:99%;
   }
 }
-@media all and (min-width: 1001px) {
+@media all and (min-width: 1041px) {
   article{
     width:1000px;
     margin:0 auto;
