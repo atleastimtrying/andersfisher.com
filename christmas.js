@@ -8,7 +8,13 @@
     'agentivity': "Merry Christmas Riaan and Edd, I'm excited to see what you guys come up with in the new year!<br> Anders",
     'measured': "Merry Christmas Max and Sam, I'm amazed at how far you've come in such a short time! Looking forward to exciting projects in the new year.<br> Anders",
     'blurtit': "To all at blurtit, you've been very gracious hosts and I'm hoping I get a chance to know you all better next year! Merry Christmas!<br> Anders",
-    'sync': "Thanks for such a warm welcome to the Sync Events. Very Excited about the new year, looking like the tech community in East Anglia has a good year ahead of it!<br> Anders",
+    'sync': "Thanks for such a warm welcome to the Sync Events. Next Year is looking good!<br> Anders",
+    'dan': "DAN! IT'S CHRISTMAS! Have a good one mate! <br> Anders",
+    'tom': "Merry Christmas Tom, Jo, Milly and Dexter! Hope you have a great time together! <br> Anders",
+    'kl': "To all at Kingsland Linassi, Merry Christmas and a Happy New Year! <br> Anders",
+    'rtc': "To all at Real Time Content, Merry Christmas and a Happy New Year! <br> Anders",
+    'fesuffolk': "Thanks so much to you all for attending FESuffolk, see you next year! <br> Anders",
+    'iprug': "Merry Christmas IPRUG! You've made a wayward JS Dev feel very at home!<br> Anders",
     'default': "Merry Christmas from Anders!"
   };
 
@@ -48,7 +54,7 @@
     }
 
     Display.prototype.resize = function() {
-      return this.textBox.css('font-size', "" + (this.xmas.width / 40) + "px");
+      return this.textBox.css('font-size', "" + (this.xmas.width / 30) + "px");
     };
 
     Display.prototype.newmessage = function(event, message) {
@@ -73,7 +79,7 @@
       this.x = Math.random() * this.xmas.width;
       this.y = Math.random() * this.xmas.height;
       this.xAcceleration = Math.random() - 0.5;
-      return this.yAcceleration = Math.random() * 1.5;
+      return this.yAcceleration = (Math.random() * 1.3) + 0.2;
     };
 
     SnowFlake.prototype.draw = function() {
@@ -94,7 +100,6 @@
     };
 
     SnowFlake.prototype.display = function() {
-      this.xmas.context.fillStyle = 'white';
       return this.xmas.context.fillRect(this.x, this.y, 2, 2);
     };
 
@@ -136,12 +141,13 @@
     }
 
     Xmas.prototype.clear = function() {
-      this.context.fillStyle = 'gray';
+      this.context.fillStyle = '#222';
       return this.context.fillRect(0, 0, this.width, this.height);
     };
 
     Xmas.prototype.animate = function() {
       this.clear();
+      this.context.fillStyle = 'white';
       $(this).trigger('draw');
       return requestAnimationFrame(this.animate);
     };

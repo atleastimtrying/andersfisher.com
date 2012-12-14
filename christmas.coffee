@@ -4,7 +4,13 @@ messages =
   'agentivity': "Merry Christmas Riaan and Edd, I'm excited to see what you guys come up with in the new year!<br> Anders"
   'measured': "Merry Christmas Max and Sam, I'm amazed at how far you've come in such a short time! Looking forward to exciting projects in the new year.<br> Anders"
   'blurtit': "To all at blurtit, you've been very gracious hosts and I'm hoping I get a chance to know you all better next year! Merry Christmas!<br> Anders"
-  'sync': "Thanks for such a warm welcome to the Sync Events. Very Excited about the new year, looking like the tech community in East Anglia has a good year ahead of it!<br> Anders"
+  'sync': "Thanks for such a warm welcome to the Sync Events. Next Year is looking good!<br> Anders"
+  'dan': "DAN! IT'S CHRISTMAS! Have a good one mate! <br> Anders"
+  'tom': "Merry Christmas Tom, Jo, Milly and Dexter! Hope you have a great time together! <br> Anders"
+  'kl': "To all at Kingsland Linassi, Merry Christmas and a Happy New Year! <br> Anders"
+  'rtc': "To all at Real Time Content, Merry Christmas and a Happy New Year! <br> Anders"
+  'fesuffolk': "Thanks so much to you all for attending FESuffolk, see you next year! <br> Anders"
+  'iprug': "Merry Christmas IPRUG! You've made a wayward JS Dev feel very at home!<br> Anders"
   'default': "Merry Christmas from Anders!"
 
 class window.HashReader
@@ -28,7 +34,7 @@ class Display
     @message = '?'
 
   resize: =>
-    @textBox.css 'font-size', "#{@xmas.width / 40}px"
+    @textBox.css 'font-size', "#{@xmas.width / 30}px"
 
   newmessage: (event, message)=>
     @message = message
@@ -44,7 +50,7 @@ class SnowFlake
     @x = Math.random() * @xmas.width
     @y = Math.random() * @xmas.height
     @xAcceleration = Math.random() - 0.5
-    @yAcceleration = Math.random() * 1.5
+    @yAcceleration = (Math.random() * 1.3) + 0.2
 
   draw: =>
     @move()
@@ -60,7 +66,6 @@ class SnowFlake
       @resetVariables()
 
   display: ->
-    @xmas.context.fillStyle = 'white'
     @xmas.context.fillRect @x, @y, 2, 2
 
 class Snow 
@@ -83,11 +88,12 @@ class Xmas
     $(window).bind 'resize', @resize
   
   clear: ->
-    @context.fillStyle = 'gray'
+    @context.fillStyle = '#222'
     @context.fillRect 0, 0, @width, @height
 
   animate: =>
     @clear()
+    @context.fillStyle = 'white'
     $(@).trigger 'draw'
     requestAnimationFrame @animate
   
