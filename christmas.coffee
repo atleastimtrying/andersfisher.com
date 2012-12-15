@@ -1,15 +1,16 @@
 messages = 
-  'pandr': 'Merry Christmas Pete, Rob and Matt, I have thoroughly enjoyed working with you guys, have a great new year!<br> Anders'
-  'kaldor': 'Merry Christmas to All of your guys at Kaldor, I really hope your next year will be as successful as this one!<br> Anders'
+  'pandr': 'Merry Christmas Pete, Rob and Matt, I have thoroughly enjoyed working with you guys. Have a great new year!<br> Anders'
+  'kaldor': 'Merry Christmas to all of your guys at Kaldor, I really hope your next year will be as successful as this one!<br> Anders'
   'agentivity': "Merry Christmas Riaan and Edd, I'm excited to see what you guys come up with in the new year!<br> Anders"
   'measured': "Merry Christmas Max and Sam, I'm amazed at how far you've come in such a short time! Looking forward to exciting projects in the new year.<br> Anders"
-  'blurtit': "To all at blurtit, you've been very gracious hosts and I'm hoping I get a chance to know you all better next year! Merry Christmas!<br> Anders"
+  'blurtit': "To all at Blurtit, you've been very gracious hosts and I'm hoping I get a chance to know you all better next year! Merry Christmas!<br> Anders"
   'sync': "Thanks for such a warm welcome to the Sync Events. Next Year is looking good!<br> Anders"
-  'dan': "DAN! IT'S CHRISTMAS! Have a good one mate! <br> Anders"
-  'tom': "Merry Christmas Tom, Jo, Milly and Dexter! Hope you have a great time together! <br> Anders"
-  'kl': "To all at Kingsland Linassi, Merry Christmas and a Happy New Year! <br> Anders"
-  'rtc': "To all at Real Time Content, Merry Christmas and a Happy New Year! <br> Anders"
-  'fesuffolk': "Thanks so much to you all for attending FESuffolk, see you next year! <br> Anders"
+  'dan': "DAN! IT'S CHRISTMAS! Have a good one mate!<br> Anders"
+  'tom': "Merry Christmas Tom, Jo, Milly and Dexter! Hope you have a great time together!<br> Anders"
+  'kl': "To all at Kingsland Linassi, Merry Christmas and a Happy New Year!<br> Anders"
+  'rtc': "To all at Real Time Content, Merry Christmas and a Happy New Year!<br> Anders"
+  'crafted': "To all at Crafted, Merry Christmas and a Happy New Year!<br> Anders"
+  'fesuffolk': "Thanks so much to you all for attending FESuffolk. Looking forward to seeing you next year!<br> Anders"
   'iprug': "Merry Christmas IPRUG! You've made a wayward JS Dev feel very at home!<br> Anders"
   'default': "Merry Christmas from Anders!"
 
