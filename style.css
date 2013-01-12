@@ -10,22 +10,25 @@ body{
   font-family: 'Yanone Kaffeesatz', sans-serif;
   font-size:16px;
   background:#fff;
+  background-image:url(bg.png);
 }
-
 article{
   padding:20px;
+  background:white;
   -moz-column-count: 3;
   -webkit-column-count: 3;
   column-count: 3;
   -moz-column-gap: 20px;
   -webkit-column-gap: 20px;
   column-gap: 20px;
+  box-shadow: 0 0 20px #333;
+  border-radius: 3px;
 }
 
 header{
   padding:30px;
-  border-bottom:1px solid #333;
   position:relative;
+  box-shadow: 0 0 20px #333;
 }
 
 header canvas{
@@ -48,14 +51,14 @@ header h2{
 section{
   width:100%;
   display:inline-block;
-  color:#666;
+  color:#777;
   margin-bottom:20px;
 }
 
 section h2{
   font-family: 'Source Sans Pro', sans-serif;
   text-align:left;
-  color:#333;
+  color:#666;
   margin:0 0 10px 0;
   position:relative;
 }
@@ -63,8 +66,8 @@ section h2:after{
   content:"";
   display:block;
   width:100%;
-  height:8px;
-  background-color:#333;
+  height:4px;
+  background-color:#666;
   position:absolute;
   bottom:0;
   left:0;
@@ -126,7 +129,7 @@ dl{
 }
 
 dt{
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid #999;
   font-weight: bold;
   margin-bottom: 10px;
   text-align:left;
@@ -147,12 +150,12 @@ dd:nth-child(odd){
 
 
 footer{
-  width:auto;
-  clear:both;
+  position:relative;
+  width:100%;
   text-align:left;
-  padding:20px 10px 10px 20px;
   background:rgb(59,141,195);
   margin-bottom:0;
+  box-shadow: 0 0 20px #333;
 }
 
 footer a{
@@ -164,7 +167,7 @@ footer a{
   border:1px solid white;
   line-height: 17px;
   font-size:16px;
-  margin:0 10px 10px 0;
+  margin:20px 0 20px 20px;
   display:inline-block;
 }
 
@@ -252,7 +255,7 @@ footer a:hover{
 @media all and (min-width: 1041px) {
   article{
     width:1000px;
-    margin:0 auto;
+    margin:20px auto;
   }
   section{
     width:311px;
