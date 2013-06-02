@@ -60,7 +60,6 @@ you can use the generic selector below, but it's slower:
 
 header{
   background-color:#193441;
-  border-color:#193441;
   color:#fcfff5;
 }
 h1,
@@ -133,9 +132,7 @@ footer{
   padding:100px 200px;
   position:relative;
 }
-section:after,
 section:before,
-header:after,
 footer:before{
   position:absolute;
   background-color: inherit;
@@ -144,18 +141,6 @@ footer:before{
   content:'';
   z-index:1;
 }
-section:after,
-header:after{
-  bottom:0;
-  left:0;
-  margin-bottom:-100px;
-  border-top-width:100px;
-  border-top-style:solid;
-  border-top-color:inherit;
-  border-right-width:100px;
-  border-right-style:solid;
-  border-right-color:rgba(128,128,128,0.5);
-}
 section:before,
 footer:before{
   right:0;
@@ -163,46 +148,62 @@ footer:before{
   margin-top:-100px;
   border-bottom-width:100px;
   border-bottom-style:solid;
-  border-bottom-color:inherit;
   border-left-width:100px;
   border-left-style:solid;
-  border-left-color:rgba(128,128,128,0.5);
 }
 
 section.about{
   background:#fcfff5;
   color:#193441;
-  border-color:#fcfff5;
+}
+section.about:before{
+  border-bottom-color:#fcfff5;
+  border-left-color:#193441;
 }
 
 section.availability{
   background-color:#476858;
   color:#fcfff5;
-  border-color:#476858;
+}
+section.availability:before{
+  border-bottom-color:#476858;
+  border-left-color:#fcfff5;
 }
 
 section.projects{
   background:#91aa9d;
   color:#476858;
-  border-color:#91aa9d;
+}
+section.projects:before{
+  border-bottom-color:#91aa9d;
+  border-left-color:#476858;
 }
 
 section.testimonials{
   background:#3e606f;
   color:#fcfff5;
-  border-color:#3e606f;
+}
+section.testimonials:before{
+  border-bottom-color:#3e606f;
+  border-left-color:#91aa9d;
 }
 
 section.skills{
   background:#fcfff5;
   color:#476858;
-  border-color:#fcfff5;
+}
+section.skills:before{
+  border-bottom-color:#fcfff5;
+  border-left-color:#3e606f;
 }
 
 section.contact{
   background:#91aa9d;
   color:#193441;
-  border-color:#91aa9d;
+}
+section.contact:before{
+  border-bottom-color:#91aa9d;
+  border-left-color:#fcfff5;
 }
 
 blockquote{
@@ -253,6 +254,18 @@ div.scrollx{
   background:rgba(255,255,255,0.2);
   border-radius:30px;
   padding:30px;
+  position:relative;
+}
+div.scrollx:after{
+  content:'';
+  position:fixed;
+  width:0;
+  height:0;
+  bottom:0;
+  left:40px;
+  margin-bottom:-40px;
+  border-left:40px solid rgba(255,255,255,0.2);
+  border-bottom:40px solid transparent;
 }
 ul.testimonials{
   width:3170px;
@@ -272,10 +285,13 @@ ul.testimonials li:last-child{
 
 footer{
   background:#d1dbbd;
-  border-color:#d1dbbd;
   color:#3e606f;
   text-align:center;
   font-size:0;
+}
+footer:before{
+  border-bottom-color:#d1dbbd;
+  border-left-color:#91aa9d;
 }
 
 footer a{
