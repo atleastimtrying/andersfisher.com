@@ -253,9 +253,10 @@ div.scrollx{
   padding:30px;
   position:relative;
   margin-bottom:20px;
+  border-radius:2px;
 }
 ul.testimonials{
-  width:3170px;
+  width:4438px;
   padding-left:0;
 }
 ul.testimonials li{
@@ -438,7 +439,7 @@ footer a:active{
   }
 
   ul.testimonials{
-    width:2760px;
+    width:2212px;
   }
 }
 
