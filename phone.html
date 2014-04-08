@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+      body{
+        background:hsl(185, 80%, 65%);
+        font-size:300%;
+      }
+      #phone{
+        width:5em;
+        height:8em;
+        background:white;
+        border-radius:0.2em;
+        position:relative;
+        box-shadow: 0.3em 0.3em 0 hsl(185, 80%, 40%);
+        cursor:pointer;
+      }
+      #phone,
+      #phone:before,
+      #phone:after{
+        -webkit-transition: all 0.5s ease-out;
+        -moz-transition: all 0.5s ease-out;
+        transition: all 0.5s ease-out;
+      }
+      #phone:after,
+      #phone.back:before{
+        border-radius:50%;
+      }
+      #phone:before,
+      #phone:after{
+        position:absolute;
+        content:'';
+        background:hsl(185, 80%, 40%);
+      }
+      #phone:before{
+        top:0.3em;
+        left:0.3em;
+        width:4.4em;
+        height:6em;
+      }
+      #phone:after{
+        bottom:1em;
+        left:50%;
+        margin:-0.4em;
+        width:0.8em;
+        height:0.8em;
+      }
+      #phone.back{
+        -webkit-transform: rotateY(180deg);
+        -moz-transform: rotateY(180deg);
+        transform: rotateY(180deg);
+        box-shadow: -0.3em 0.3em 0 hsl(185, 80%, 40%);
+      }
+      #phone.back:before{
+        width:1em;
+        height:1em;
+        margin:-0.5em;
+        top:2em;
+        left:2.5em;
+        background:hsl(0, 0%, 0%);
+        border:0.05em solid hsl(0, 0%, 70%);
+      }
+      #phone.back:after{
+        width:0.4em;
+        height:0.4em;
+        top:2.25em;
+        left:2.75em;
+        background:hsl(0, 0%, 30%);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="phone"></div>
+    <script>
+      phone.onclick=function(){phone.className=(phone.className=="")?"back":"";};
+    </script>
+  </body>
+</html>
